@@ -23,6 +23,12 @@ namespace SigmaServizioRapportini.App {
             LineSX.Height = shpTOTA.Top + shpTOTA.Height - labDATA.Top; // Detail.Height
             LineDX.Height = shpTOTA.Top + shpTOTA.Height - labDATA.Top; // Detail.Height
 
+            if (txtCMPIANNORE.Text.Trim() == "")
+                txtCMPIANNORE.Text = "0";
+
+            if (txtCMPIANOVIA.Text.Trim() == "")
+                txtCMPIANOVIA.Text = "0";
+
             txtCMPIANNORE.Text = (Convert.ToDecimal(txtCMPIANNORE.Text) + Convert.ToDecimal(txtCMPIANOVIA.Text)).ToString();
         }
     }

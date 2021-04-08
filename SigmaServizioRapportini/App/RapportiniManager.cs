@@ -82,6 +82,8 @@ namespace SigmaServizioRapportini.App {
                     return true;
                 } catch (Exception ex) {
                     Globale.ScriviFileLog(ex.Message.ToString());
+                    Globale.Segnala(dataRapp, numeRapp, drImpostazioni);
+
                     return false;
                 }
             }
